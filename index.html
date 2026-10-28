@@ -351,13 +351,12 @@ footer{background:var(--surface);padding-top:var(--m);padding-bottom:40px}
     <div class="plate-wrap" data-r>
       <div class="plate report" data-ui aria-label="Пример отчёта бота о закрытии смены">
         <p class="r-title">Закрытие смены · 22:07</p>
-        <p class="r-ok"><i aria-hidden="true"></i>Касса и конверт сходятся</p>
+        <p class="r-ok"><i aria-hidden="true"></i>Касса сходится</p>
         <dl class="r-rows num">
           <div><dt>Наличные по iiko</dt><dd>1 860 000</dd></div>
           <div><dt>Расходы из кассы</dt><dd>−45 000</dd></div>
-          <div><dt>В конверт</dt><dd>−600 000</dd></div>
-          <div class="sum"><dt>Должно быть в кассе</dt><dd>1 215 000</dd></div>
-          <div class="sum"><dt>Факт в кассе</dt><dd>1 215 000</dd></div>
+          <div class="sum"><dt>Должно быть в кассе</dt><dd>1 815 000</dd></div>
+          <div class="sum"><dt>Факт в кассе</dt><dd>1 815 000</dd></div>
         </dl>
         <p class="r-note">До исправления было −45 000. Причина: забыли записать расход на хлеб.</p>
         <p class="r-foot">Чек-лист 14 из 14 · фото 6</p>
@@ -373,7 +372,7 @@ footer{background:var(--surface);padding-top:var(--m);padding-bottom:40px}
       </div>
       <div>
         <h2 id="case-h" data-r style="--d:90ms">Кофейня-бар «Рассвет», Ташкент</h2>
-        <p class="panel" id="panel" role="tabpanel" data-r style="--d:180ms">Касса и конверт проверяются в день закрытия. Если не сходится, бот подсказывает, где ошибка, ещё до конца смены.</p>
+        <p class="panel" id="panel" role="tabpanel" data-r style="--d:180ms">Касса проверяется в день закрытия. Если не сходится, бот подсказывает, где ошибка, ещё до конца смены.</p>
         <p class="live-dot" data-r style="--d:240ms"><i></i>Работает каждый день с октября 2026</p>
       </div>
       <div class="cells" data-r style="--d:240ms">
@@ -388,7 +387,7 @@ footer{background:var(--surface);padding-top:var(--m);padding-bottom:40px}
     <div class="board">
       <div class="tile w6h2 head-tile" data-r>
         <h2 id="mods-h">12 модулей в одном боте</h2>
-        <p>Ещё в боте: <b>наличные и конверт</b>, <b>сводка недели</b> по понедельникам, <b>заказы точек</b>, <b>генуборка и склад</b>, <b>регламенты</b> с поиском, <b>брони</b>.</p>
+        <p>Ещё в боте: <b>учёт наличных</b>, <b>сводка недели</b> по понедельникам, <b>заказы точек</b>, <b>генуборка и склад</b>, <b>регламенты</b> с поиском, <b>брони</b>.</p>
       </div>
       <div class="tile w6h2 b" data-ui data-r style="--d:60ms">
         <div class="ui u-alive">Ещё живая</div>
@@ -538,7 +537,7 @@ let auto=!matchMedia('(prefers-reduced-motion: reduce)').matches,cur=0;
 setInterval(()=>{if(auto&&!document.hidden){cur=(cur+1)%day.length;show(cur)}},5200);
 
 // кейс: вкладки
-const tabs=['Касса и конверт проверяются в день закрытия. Если не сходится, бот подсказывает, где ошибка, ещё до конца смены.',
+const tabs=['Касса проверяется в день закрытия. Если не сходится, бот подсказывает, где ошибка, ещё до конца смены.',
  'Выходные отмечают в боте до субботы, неделю бот составляет сам и рассылает каждому его смены.',
  'Кто на смене, что сварено, где проблема: всё видно в приложении. Спрашивать в чате больше не нужно.',
  'Новичок получает видео-обучение сразу после регистрации и находит любой регламент поиском.'];
